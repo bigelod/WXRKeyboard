@@ -154,6 +154,7 @@ namespace OnScreenKeyboard
                         {
                             keyCodeDeadTilde = ("%" + keyCodeDeadTilde);
                         }
+                        //TODO: Change this to send via the InputAPI rather than SendKeys
                         SendKeys.Send(keyCodeDeadTilde.Replace("{SPACE}", " "));
                         ClearControlAltShiftState();
                         ClearDeadKeyState();
