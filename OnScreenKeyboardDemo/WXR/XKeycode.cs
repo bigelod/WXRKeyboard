@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OnScreenKeyboardDemo.WXR
 {
-    public class XKeycode
+    public static class XKeycode
     {
-        public string ToKeyCombo(string inKey)
+        public static string ToKeyCombo(string inKey)
         {
             string ans = "";
 
