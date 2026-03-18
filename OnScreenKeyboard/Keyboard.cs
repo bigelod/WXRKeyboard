@@ -22,6 +22,8 @@ namespace OnScreenKeyboard
         private bool _isShift;
         private string _deadKeyCode = string.Empty;
 
+        private Action<string> onKeySend = null;
+
         public Keyboard()
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -29,6 +31,11 @@ namespace OnScreenKeyboard
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             SetStyle(ControlStyles.ResizeRedraw, true);
             SetStyle(ControlStyles.UserPaint, true);
+        }
+
+        public void SetSendKeyAction(Action<string> act)
+        {
+            onKeySend = act;
         }
 
         public void BuildDefaultDefinition()
@@ -155,7 +162,8 @@ namespace OnScreenKeyboard
                             keyCodeDeadTilde = ("%" + keyCodeDeadTilde);
                         }
                         //TODO: Change this to send via the InputAPI rather than SendKeys
-                        SendKeys.Send(keyCodeDeadTilde.Replace("{SPACE}", " "));
+                        //SendKeys.Send(keyCodeDeadTilde.Replace("{SPACE}", " "));
+                        if (onKeySend != null) onKeySend.Invoke(keyCodeDeadTilde);
                         ClearControlAltShiftState();
                         ClearDeadKeyState();
                         return;
