@@ -144,7 +144,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "24";
             }
-            else if (inKey == "Q")
+            if (inKey == "Q")
             {
                 ans += upperCase + "24";
             }
@@ -153,7 +153,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "25";
             }
-            else if (inKey == "W")
+            if (inKey == "W")
             {
                 ans += upperCase + "25";
             }
@@ -162,7 +162,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "26";
             }
-            else if (inKey == "E")
+            if (inKey == "E")
             {
                 ans += upperCase + "26";
             }
@@ -171,7 +171,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "27";
             }
-            else if (inKey == "R")
+            if (inKey == "R")
             {
                 ans += upperCase + "27";
             }
@@ -180,7 +180,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "28";
             }
-            else if (inKey == "T")
+            if (inKey == "T")
             {
                 ans += upperCase + "28";
             }
@@ -189,7 +189,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "29";
             }
-            else if (inKey == "Y")
+            if (inKey == "Y")
             {
                 ans += upperCase + "29";
             }
@@ -198,7 +198,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "30";
             }
-            else if (inKey == "U")
+            if (inKey == "U")
             {
                 ans += upperCase + "30";
             }
@@ -207,7 +207,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "31";
             }
-            else if (inKey == "I")
+            if (inKey == "I")
             {
                 ans += upperCase + "31";
             }
@@ -216,7 +216,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "32";
             }
-            else if (inKey == "O")
+            if (inKey == "O")
             {
                 ans += upperCase + "32";
             }
@@ -225,7 +225,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "33";
             }
-            else if (inKey == "P")
+            if (inKey == "P")
             {
                 ans += upperCase + "33";
             }
@@ -257,7 +257,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "38";
             }
-            else if (inKey == "A")
+            if (inKey == "A")
             {
                 ans += upperCase + "38";
             }
@@ -266,7 +266,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "39";
             }
-            else if (inKey == "S")
+            if (inKey == "S")
             {
                 ans += upperCase + "39";
             }
@@ -275,7 +275,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "40";
             }
-            else if (inKey == "D")
+            if (inKey == "D")
             {
                 ans += upperCase + "40";
             }
@@ -284,7 +284,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "41";
             }
-            else if (inKey == "F")
+            if (inKey == "F")
             {
                 ans += upperCase + "41";
             }
@@ -293,7 +293,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "42";
             }
-            else if (inKey == "G")
+            if (inKey == "G")
             {
                 ans += upperCase + "42";
             }
@@ -302,7 +302,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "43";
             }
-            else if (inKey == "H")
+            if (inKey == "H")
             {
                 ans += upperCase + "43";
             }
@@ -311,7 +311,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "44";
             }
-            else if (inKey == "J")
+            if (inKey == "J")
             {
                 ans += upperCase + "44";
             }
@@ -320,7 +320,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "45";
             }
-            else if (inKey == "K")
+            if (inKey == "K")
             {
                 ans += upperCase + "45";
             }
@@ -329,7 +329,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "46";
             }
-            else if (inKey == "L")
+            if (inKey == "L")
             {
                 ans += upperCase + "46";
             }
@@ -374,7 +374,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "52";
             }
-            else if (inKey == "Z")
+            if (inKey == "Z")
             {
                 ans += upperCase + "52";
             }
@@ -383,7 +383,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "53";
             }
-            else if (inKey == "X")
+            if (inKey == "X")
             {
                 ans += upperCase + "53";
             }
@@ -392,7 +392,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "54";
             }
-            else if (inKey == "C")
+            if (inKey == "C")
             {
                 ans += upperCase + "54";
             }
@@ -401,7 +401,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "55";
             }
-            else if (inKey == "V")
+            if (inKey == "V")
             {
                 ans += upperCase + "55";
             }
@@ -410,7 +410,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "56";
             }
-            else if (inKey == "B")
+            if (inKey == "B")
             {
                 ans += upperCase + "56";
             }
@@ -419,7 +419,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "57";
             }
-            else if (inKey == "N")
+            if (inKey == "N")
             {
                 ans += upperCase + "57";
             }
@@ -428,7 +428,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "58";
             }
-            else if (inKey == "M")
+            if (inKey == "M")
             {
                 ans += upperCase + "58";
             }

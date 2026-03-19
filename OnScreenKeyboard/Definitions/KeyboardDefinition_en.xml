@@ -80,7 +80,7 @@
 	</Key>
 	<Key Top="0" Left="27" Height="2" Width="2">
 		<State Style="Default" Text="\" Code="{/}" />
-		<State Style="Shift" Text="/" Code="{//}" />
+		<State Style="Shift" Text="|" Code="{|}" />
 		<State Style="AltGr" Text="¬" Code="{¬}" />
 		<State Style="AltGrShift" Text="¦" Code="{¦}" />
 	</Key>
@@ -246,7 +246,7 @@
 		<State Style="AltGrShift" Text="" Code="" />
 	</Key>
 	<Key Top="4" Left="23" Height="2" Width="2">
-		<State Style="Default" Text="/" Code="{/}" />
+		<State Style="Default" Text="/" Code="{//}" />
 		<State Style="Shift" Text="?" Code="{?}" />
 		<State Style="AltGr" Text="¿" Code="¿" />
 		<State Style="AltGrShift" Text="¿" Code="¿" />

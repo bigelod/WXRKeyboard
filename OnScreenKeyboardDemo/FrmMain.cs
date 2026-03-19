@@ -9,7 +9,7 @@ namespace OnScreenKeyboardDemo
 {
     public partial class FrmMain : Form
     {
-        private const int inputSendTime = 1000;
+        private const int handleCheckTime = 1000;
         private System.Threading.Timer _handleCheck;
         private WXRInputAPI wxrInputAPI;
 
@@ -27,7 +27,7 @@ namespace OnScreenKeyboardDemo
             myOwnHandle = IntPtr.Zero;
             lastFoundHandle = IntPtr.Zero;
 
-            this.TopMost = true;
+            //this.TopMost = true; //Doesn't work in Wine
 
             FormClosing += FrmMain_FormClosing;
 
@@ -35,7 +35,7 @@ namespace OnScreenKeyboardDemo
 
             keyboardControl.SetSendKeyAction(SendWXRInput);
 
-            _handleCheck = new System.Threading.Timer(TimerCallback, null, inputSendTime, inputSendTime);
+            _handleCheck = new System.Threading.Timer(TimerCallback, null, handleCheckTime, handleCheckTime);
 
             this.Width = Math.Max(Screen.PrimaryScreen.Bounds.Width - 200, 600);
             
@@ -70,6 +70,23 @@ namespace OnScreenKeyboardDemo
             lastFoundHandle = targetHwnd;
         }
 
+        public void ReturnToFront()
+        {
+            if (myOwnHandle != IntPtr.Zero)
+            {
+                try
+                {
+                    Thread.Sleep(350); //Time to ensure the other window got the input
+
+                    WindowsAPI.SetForegroundWindow(myOwnHandle);
+                }
+                catch
+                {
+
+                }
+            }            
+        }
+
         public void SwitchToLastWindow()
         {
             if (lastFoundHandle != IntPtr.Zero)
@@ -77,6 +94,8 @@ namespace OnScreenKeyboardDemo
                 try
                 {
                     WindowsAPI.SetForegroundWindow(lastFoundHandle);
+
+                    Thread.Sleep(150); //Quick sleep to ensure it gets the input
                 }
                 catch
                 {
@@ -108,6 +127,7 @@ namespace OnScreenKeyboardDemo
                 {
                     wxrInputAPI.SendData(sendText);
                 }
+                ReturnToFront();
             }
         }
 
@@ -124,6 +144,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("M,1,0,0,0,0");
+                ReturnToFront();
             }
         }
 
@@ -133,6 +154,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("M,0,1,0,0,0");
+                ReturnToFront();
             }
         }
 
@@ -142,6 +164,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("M,0,0,1,0,0");
+                ReturnToFront();
             }
         }
 
@@ -151,6 +174,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("M,0,0,0,1,0");
+                ReturnToFront();
             }
         }
 
@@ -160,6 +184,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("M,0,0,0,0,1");
+                ReturnToFront();
             }
         }
 
@@ -169,6 +194,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,115");
+                ReturnToFront();
             }
         }
 
@@ -178,6 +204,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,110");
+                ReturnToFront();
             }
         }
 
@@ -187,6 +214,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,118");
+                ReturnToFront();
             }
         }
 
@@ -196,6 +224,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,72");
+                ReturnToFront();
             }
         }
 
@@ -205,6 +234,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,71");
+                ReturnToFront();
             }
         }
 
@@ -223,6 +253,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,69");
+                ReturnToFront();
             }
         }
 
@@ -232,6 +263,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,68");
+                ReturnToFront();
             }
         }
 
@@ -241,6 +273,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,67");
+                ReturnToFront();
             }
         }
 
@@ -250,6 +283,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,50");
+                ReturnToFront();
             }
         }
 
@@ -259,6 +293,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,37");
+                ReturnToFront();
             }
         }
 
@@ -268,6 +303,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,96");
+                ReturnToFront();
             }
         }
 
@@ -277,6 +313,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,95");
+                ReturnToFront();
             }
         }
 
@@ -286,6 +323,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,76");
+                ReturnToFront();
             }
         }
 
@@ -295,6 +333,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,75");
+                ReturnToFront();
             }
         }
 
@@ -304,6 +343,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,74");
+                ReturnToFront();
             }
         }
 
@@ -313,6 +353,7 @@ namespace OnScreenKeyboardDemo
             {
                 SwitchToLastWindow();
                 wxrInputAPI.SendData("K,73");
+                ReturnToFront();
             }
         }
         #endregion

@@ -69,6 +69,13 @@ namespace OnScreenKeyboardDemo.WXR
         {
             try
             {
+                string inputVersionFile = dataDirectory + "/input_version";
+
+                if (File.Exists(inputVersionFile))
+                {
+                    File.Delete(inputVersionFile);
+                }
+
                 transmitClient.Close();
             }
             catch (Exception e)
