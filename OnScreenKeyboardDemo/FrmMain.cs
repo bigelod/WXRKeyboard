@@ -16,8 +16,6 @@ namespace OnScreenKeyboardDemo
         private IntPtr myOwnHandle;
         private IntPtr lastFoundHandle;
 
-        private string sendText = "";
-
         public FrmMain()
         {
             InitializeComponent();
@@ -38,6 +36,19 @@ namespace OnScreenKeyboardDemo
             keyboardControl.SetSendKeyAction(SendWXRInput);
 
             _handleCheck = new System.Threading.Timer(TimerCallback, null, inputSendTime, inputSendTime);
+
+            this.Width = Math.Max(Screen.PrimaryScreen.Bounds.Width - 200, 600);
+            
+            if (this.Width == 600)
+            {
+                this.Left = 10;
+            }
+            else
+            {
+                this.Left = 100;
+            }
+
+            this.Top = Math.Max((Screen.PrimaryScreen.Bounds.Height - this.Height) - 40, 10);
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -92,8 +103,11 @@ namespace OnScreenKeyboardDemo
             if (wxrInputAPI != null)
             {
                 SwitchToLastWindow();
-                //wxrInputAPI.SendData(input);
-                sendText += "," + XKeycode.ToKeyCombo(input);
+                string sendText = XKeycode.ToKeyCombo(input);
+                if (sendText != "K,")
+                {
+                    wxrInputAPI.SendData(sendText);
+                }
             }
         }
 

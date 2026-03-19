@@ -143,7 +143,7 @@
             this.btnMouseLeftClick.Name = "btnMouseLeftClick";
             this.btnMouseLeftClick.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnMouseLeftClick.Size = new System.Drawing.Size(75, 61);
-            this.btnMouseLeftClick.TabIndex = 2;
+            this.btnMouseLeftClick.TabIndex = 0;
             this.btnMouseLeftClick.Text = "Left Click";
             this.btnMouseLeftClick.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMouseLeftClick.UseVisualStyleBackColor = true;
