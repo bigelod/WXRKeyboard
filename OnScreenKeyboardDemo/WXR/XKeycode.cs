@@ -538,6 +538,7 @@ namespace OnScreenKeyboardDemo.WXR
              *   %
              *   ^
              *   &
+             *   $
              */
 
             //Handled elsewhere:
