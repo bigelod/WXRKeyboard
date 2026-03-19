@@ -498,17 +498,17 @@ namespace OnScreenKeyboardDemo.WXR
             //KEY_NUM_LOCK(77),
             if (inKey == "{NUMLCK}")
             {
-                ans += 77;
+                ans += "77";
             }
             //KEY_PRTSCN(107),
             if (inKey == "{PRTSCN}")
             {
-                ans += 107;
+                ans += "107";
             }
             //KEY_DEL(119),
             if (inKey == "{DELETE}")
             {
-                ans += 119;
+                ans += "119";
             }
 
             //Need a home?
