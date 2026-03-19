@@ -65,9 +65,10 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "13";
             }
-            if (inKey == "{$}")
+            //KEY_CAPS_LOCK(66),
+            if (inKey == "{CAPS}")
             {
-                ans += upperCase + "4";
+                ans += "66";
             }
             //KEY_5(14),
             if (inKey == "5")
@@ -365,7 +366,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "51";
             }
-            if (inKey == "{?}")
+            if (inKey == "{|}")
             {
                 ans += upperCase + "51";
             }
@@ -455,7 +456,7 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += "61";
             }
-            if (inKey == "{|}")
+            if (inKey == "{?}")
             {
                 ans += upperCase + "61";
             }
@@ -504,6 +505,11 @@ namespace OnScreenKeyboardDemo.WXR
             {
                 ans += 107;
             }
+            //KEY_DEL(119),
+            if (inKey == "{DELETE}")
+            {
+                ans += 119;
+            }
 
             //Need a home?
             //KEY_KP_MULTIPLY(63),
@@ -525,7 +531,6 @@ namespace OnScreenKeyboardDemo.WXR
             //KEY_SHIFT_R(62),
             //KEY_CTRL_R(105),
             //KEY_ALT_R(108),
-            //KEY_CAPS_LOCK(66),
             //KEY_SCROLL_LOCK(78),
 
             //Unsuable symbols?
@@ -551,7 +556,6 @@ namespace OnScreenKeyboardDemo.WXR
             //KEY_HOME(110),
             //KEY_END(115),
             //KEY_INSERT(118),
-            //KEY_DEL(119),
             //KEY_SHIFT_L(50),
 
             //Never used

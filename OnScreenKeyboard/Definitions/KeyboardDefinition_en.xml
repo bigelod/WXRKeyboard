@@ -86,7 +86,7 @@
 	</Key>
 	<Key Top="0" Left="29" Height="2" Width="2">
 		<State Style="Default" Text="=" Code="{=}" />
-		<State Style="Shift" Text="+" Code="{+}" />
+		<State Style="Shift" Text="+" Code="{ADD}" />
 		<State Style="AltGr" Text="×" Code="{×}" />
 		<State Style="AltGrShift" Text="÷" Code="{÷}" />
 	</Key>
@@ -343,7 +343,7 @@
 	</Key>
 	<Key Top="2" Left="35" Height="2" Width="2">
 		<State Style="Default" Text="4" Code="4" />
-		<State Style="Shift" Text="$" Code="{$}" />
+		<State Style="Shift" Text="CAPS" Code="{CAPS}" />
 		<State Style="AltGr" Text="¤" Code="¤" />
 		<State Style="AltGrShift" Text="" Code="" />
 	</Key>
