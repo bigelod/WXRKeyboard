@@ -47,6 +47,24 @@ namespace OnScreenKeyboardDemo.WXR
                 return;
             }
 
+            string versionFile = dataDirectory + "/version";
+
+            if (!File.Exists(versionFile))
+            {
+                try
+                {
+                    using (StreamWriter sw = new StreamWriter(versionFile))
+                    {
+                        sw.WriteLine("0.5");
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+
+            //This may still be used in a future update, so keep it for now
             string inputVersionFile = dataDirectory + "/input_version";
 
             if (!File.Exists(inputVersionFile))
