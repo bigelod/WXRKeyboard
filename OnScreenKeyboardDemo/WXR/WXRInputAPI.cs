@@ -35,7 +35,14 @@ namespace OnScreenKeyboardDemo.WXR
                     debugIP = Clipboard.GetText();
                 }
 
-                targetIP = debugIP;
+                if (debugIP == "")
+                {
+                    RemoteDebug = false;
+                }
+                else
+                {
+                    targetIP = debugIP;
+                }
             }
 
             transmitClient = new UdpClient();

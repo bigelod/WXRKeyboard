@@ -147,7 +147,7 @@ namespace OnScreenKeyboardDemo
             if (wxrInputAPI != null)
             {
                 SwitchToLastWindow();
-                wxrInputAPI.SendData("M,1,0,0,0,0");
+                wxrInputAPI.SendData("M,TFFFF");
                 ReturnToFront();
             }
         }
@@ -157,7 +157,7 @@ namespace OnScreenKeyboardDemo
             if (wxrInputAPI != null)
             {
                 SwitchToLastWindow();
-                wxrInputAPI.SendData("M,0,1,0,0,0");
+                wxrInputAPI.SendData("M,FTFFF");
                 ReturnToFront();
             }
         }
@@ -167,7 +167,7 @@ namespace OnScreenKeyboardDemo
             if (wxrInputAPI != null)
             {
                 SwitchToLastWindow();
-                wxrInputAPI.SendData("M,0,0,1,0,0");
+                wxrInputAPI.SendData("M,FFTFF");
                 ReturnToFront();
             }
         }
@@ -177,7 +177,7 @@ namespace OnScreenKeyboardDemo
             if (wxrInputAPI != null)
             {
                 SwitchToLastWindow();
-                wxrInputAPI.SendData("M,0,0,0,1,0");
+                wxrInputAPI.SendData("M,FFFTF");
                 ReturnToFront();
             }
         }
@@ -187,7 +187,7 @@ namespace OnScreenKeyboardDemo
             if (wxrInputAPI != null)
             {
                 SwitchToLastWindow();
-                wxrInputAPI.SendData("M,0,0,0,0,1");
+                wxrInputAPI.SendData("M,FFFFT");
                 ReturnToFront();
             }
         }
