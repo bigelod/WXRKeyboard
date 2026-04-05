@@ -72,6 +72,8 @@ namespace OnScreenKeyboardDemo
 
         public void ReturnToFront()
         {
+            if (wxrInputAPI != null && wxrInputAPI.RemoteDebug) return;
+
             if (myOwnHandle != IntPtr.Zero)
             {
                 try
@@ -89,6 +91,8 @@ namespace OnScreenKeyboardDemo
 
         public void SwitchToLastWindow()
         {
+            if (wxrInputAPI != null && wxrInputAPI.RemoteDebug) return;
+
             if (lastFoundHandle != IntPtr.Zero)
             {
                 try

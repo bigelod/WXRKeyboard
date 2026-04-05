@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -11,6 +12,11 @@ namespace OnScreenKeyboardDemo.WXR
 {
     public class WXRInputAPI
     {
+        //Optional: Remote debug support, still requires an app running in WinlatorXR that has triggered XrAPI 0.5 or newer
+        //When enabled the window switching behavior will be disabled on this instance
+        public bool RemoteDebug = false;
+        private string debugIP = "127.0.0.1";
+
         private int udpPortOUT = 7728;
         private int udpPortIN = 7287;
         private string targetIP = "127.0.0.1";
@@ -21,6 +27,11 @@ namespace OnScreenKeyboardDemo.WXR
 
         public WXRInputAPI()
         {
+            if (RemoteDebug)
+            {
+                targetIP = debugIP;
+            }
+
             transmitClient = new UdpClient();
 
             if (dataDirectory == "Z:/tmp/xr" && !Directory.Exists(dataDirectory))
