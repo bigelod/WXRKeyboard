@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OnScreenKeyboardDemo.WXR
 {
@@ -15,7 +16,7 @@ namespace OnScreenKeyboardDemo.WXR
         //Optional: Remote debug support, still requires an app running in WinlatorXR that has triggered XrAPI 0.5 or newer
         //When enabled the window switching behavior will be disabled on this instance
         public bool RemoteDebug = false;
-        private string debugIP = "127.0.0.1";
+        private string debugIP = "";
 
         private int udpPortOUT = 7728;
         private int udpPortIN = 7287;
@@ -29,6 +30,11 @@ namespace OnScreenKeyboardDemo.WXR
         {
             if (RemoteDebug)
             {
+                if (debugIP == "" && Clipboard.ContainsText())
+                {
+                    debugIP = Clipboard.GetText();
+                }
+
                 targetIP = debugIP;
             }
 
